@@ -1,6 +1,11 @@
 import agente as ai
 from pathlib import Path
 
+with open("prompt.txt", "r", encoding="utf-8") as f:
+    
+    prompt = f.read()
+
+
 docs = [Path(doc) for doc in Path("docs").iterdir() if doc.is_file()]
 
 if len(docs) != 2: print("Erro: Você precisa de pelo menos 2 arquivos na pasta 'docs'.")
@@ -12,7 +17,7 @@ else:
     
     try:
     
-        resposta = ai.response_json(doc1, doc2)
+        resposta = ai.response_json(doc1, doc2, prompt)
         
         if resposta is not None:
             
