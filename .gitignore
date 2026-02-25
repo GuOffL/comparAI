@@ -12,3 +12,7 @@ __pycache__/
 
 # Saídas de execução (opcional - se forem apenas testes)
 response.json
+
+
+# Documentos com informações dos alunos da escola
+docs/

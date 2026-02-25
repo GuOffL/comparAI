@@ -24,6 +24,9 @@ else:
             with open("response.json", "w", encoding="utf-8") as f:
 
                 f.write(resposta)
+                
+        ai.client.files.delete(name=str(doc1.name))
+        ai.client.files.delete(name=str(doc2.name))
         
     except Exception as e:
         
